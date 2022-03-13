@@ -1,9 +1,0 @@
-TT2020 is an advanced, mulilingual and free typewriter font family for a new decade.
-
-This font includes ten copies of each glyph. This means that it is guaranteed that in a string of ten characters, such as "EEEEEEEEEE", all E's will look different.
-
-TT2020's glyph selection works in most programs, but not all.
-
-TT2020 is currently in beta. This is style "D". The family is licensed under the SIL Open Font License.
-
-https://github.com/ctrlcctrlv/TT2020

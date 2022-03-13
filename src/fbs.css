@@ -44,7 +44,7 @@ canvas {
 
 /* menu wraper */;
 #wrap {
-	z-index : 99;
+	z-index : 95;
 }
 
 /* floating buttons on the top right corner of the page */
@@ -56,7 +56,7 @@ canvas {
 	height              : 20px;
 	background-color    : #D8DBE2;
 	border              : 2px solid white;
-	border-radius       : 25px;
+	border-radius       : 30px;
 
 	position            : absolute;
 	top                 : 40px;
@@ -70,10 +70,8 @@ canvas {
 
 /* button */
 .dropdownMenu li {
-	height           : auto;
 	list-style       : none; 
 	text-align       : center;
-	background-color : #D8DBE2;
 	margin  : 0;
 	padding : 0;
 }
@@ -90,16 +88,22 @@ canvas {
 
 /* subsection of a button */
 .dropdownMenu li ul {
-	background-color : white;
 	display : none;
 	height : auto;
+
+	width               : 20px;
+	background-color    : #D8DBE2;
+	border              : 2px solid white;
+	border-radius       : 25px;
+
+	padding: 0;
 }
 
-/* hovering a subsection */
-.dropdownMenu li:hover ul {
+.dropdownMenu:hover{
+	background-color : #A9BCD0;
+}
+
+/* hovering a button will display its subsections */
+.dropdownMenu:hover ul {
 	display : block;
-}
-
-.dropdownMenu li ul li a {
-	background-color : #D8DBE2;
 }

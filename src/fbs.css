@@ -99,6 +99,7 @@ canvas {
 	padding: 0;
 }
 
+/* changing color when hovering */;
 .dropdownMenu:hover{
 	background-color : #A9BCD0;
 }

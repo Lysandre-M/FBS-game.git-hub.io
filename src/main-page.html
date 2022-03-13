@@ -1,0 +1,62 @@
+<!-- Main page (includes game screen and menu) -->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta
+			http-equiv = "Content-Type"
+			content    = "text/html; charset = UTF-8"
+		>
+
+		<link
+			rel  = "stylesheet"
+			type = "text/css"
+			href = "fbs.css"
+		>
+		
+		<link
+			rel  = "icon"
+			type = "image/png"
+			href = "https://cdn-icons-png.flaticon.com/512/66/66722.png"
+		>
+
+		<!--<script src="game-script.js" type="text/javascript"></script>-->
+
+		<title>FBS-game</title>
+	</head>
+
+	<!--<body id="window" onload = "onload()">-->
+	<body id="window">
+		<!-- Page content -->
+  		<div id="canvas">
+  			<!-- Game screen -->
+			<canvas id="game_area"></canvas>
+
+			<!-- Menu -->
+			<div id = "wrap">
+				<ul class="dropdownMenu">
+					<!-- menu icon -->
+					<li>
+						<img
+							src = "../files/bars-solid.svg"
+							alt = "menu">
+
+						<!-- sub-menus -->
+						<ul>
+							<li><a href = "#">test 1</a></li>
+							<li><a href = "#">test 2</a></li>
+							<li><a href = "#">test 3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+			<!-- footer -->
+			<div id = "footer">
+				FBS Game v 0.0.1 - &copy 2022 FBS Team
+			</div>
+ 		</div>
+ </body>
+
+</html>

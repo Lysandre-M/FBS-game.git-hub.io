@@ -1,0 +1,105 @@
+/* CSS style-sheet for FBS game*/
+
+/* loading font (make sure to have the last version of the 'files' folder) */
+@font-face {
+	font-family : "FBS-font";
+	src         : url("../files/d-puntillas-A-Lace.ttf") format("truetype");
+}
+
+/* reset */
+html, body {
+	margin  : 0;
+	padding : 0;
+}
+
+html {
+	background-color : #D8DBE2;
+
+	color            : white;
+	font-family      : "FBS-font";
+
+	text-align       : center;
+	align-items      : center;
+}
+
+#canvas {
+	display        : flex;
+	flex-direction : column;
+	align-items    : center;
+}
+
+canvas {
+	height           : 100vh;
+	width            : 100vw;
+	background-color : black;
+	display          : block;
+}
+
+/* to use for version and copyright info */
+#footer {
+	position : absolute;
+	top      : 95vh;
+	left     : 5vh;
+}
+
+/* menu wraper */;
+#wrap {
+	z-index : 99;
+}
+
+/* floating buttons on the top right corner of the page */
+.dropdownMenu {
+	font-family         : "FBS-font";
+	color               : black;
+
+	width               : 20px;
+	height              : 20px;
+	background-color    : #D8DBE2;
+	border              : 2px solid white;
+	border-radius       : 25px;
+
+	position            : absolute;
+	top                 : 40px;
+	left                : 40px;
+	padding             : 19px;
+
+	transition-duration : 0.2s;
+
+	cursor              : pointer;
+}
+
+/* button */
+.dropdownMenu li {
+	height           : auto;
+	list-style       : none; 
+	text-align       : center;
+	background-color : #D8DBE2;
+	margin  : 0;
+	padding : 0;
+}
+
+/* button link*/
+.dropdownMenu a {
+	display : block;
+}
+
+/* hovering the button link */
+.dropdownMenu li:hover, a:hover {
+	background-color : background-color : #A9BCD0;
+}
+
+/* subsection of a button */
+.dropdownMenu li ul {
+	background-color : white;
+	display : none;
+	height : auto;
+}
+
+/* hovering a subsection */
+.dropdownMenu li:hover ul {
+	display : block;
+}
+
+.dropdownMenu li ul li a {
+	background-color : #D8DBE2;
+}

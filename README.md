@@ -12,6 +12,7 @@ Pensez toujours à mettre un message pour chaque commit résumant vos modificati
 ## Conventions de code
 
 > Nommage en camelCase. Les noms de variables et de fonctions sera mis en anglais, de même pour la documentation (commentaires inclus !). J'indente avec des ``tab`` mais je peux changer si cela est nécessaire (c'est mieux que tout le monde indente de la même manière). 
+
 -Lysandre
 
 ## Installation du jeu et utilisation

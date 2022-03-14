@@ -108,3 +108,48 @@ canvas {
 .dropdownMenu:hover ul {
 	display : block;
 }
+
+/* Don't mind this part I'm just having fun trying to 
+ * figure out how loaders work :3 */
+
+#circleLoader {
+	position : absolute;
+	top : 45%;
+	left : 45%;
+	border : 5px solid white;
+	border-top: 5px solid #A9BCD0;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	-webkit-animation: spin 2s linear infinite; /* for safari web browser */
+	animation: spin 2s linear infinite;
+}
+
+/* [test] animation when loading complete */
+.animation_1 {
+	position: relative;
+	-webkit-animation-name: animation_1;
+	-webkit-animation-duration: 1s;
+	animation-name: animation_1;
+	animation-duration: 1s;
+}
+
+@-webkit-keyframes animation_1 {
+	from { opacity: 0; }
+	to { opacity: 1 }
+}
+
+@keyframes animation_1 {
+	from { opacity: 0; }
+	to { opacity: 1 }
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg) }
+	100% { -webkit-transform: rotate(360deg) }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg) }
+	100% { transform: rotate(360deg) }
+}

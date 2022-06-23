@@ -3,7 +3,7 @@
 /**
  * Class representing a board
  * @exports Board
- * @version 2.0
+ * @version 2.1
  */
 export class Board{
     board = [];
@@ -48,8 +48,17 @@ export class Board{
      * Get the max of line and column in the board
      * @returns {[number, number]} number max of line and column
      */
-    maxCoord(){
-        return [this.maxLine, this.maxColumn];
+     static maxCoord(board){
+        return [board.line, board.column];
+    }
+
+
+    /**
+     * Get the content of the board in Array form
+     * @returns {Array<Array<any>>}} Content of the board
+     */
+    getBoard(){
+        return this.board;
     }
     // <<< accessor
 
@@ -83,43 +92,7 @@ export class Board{
      * @param {[number, number]} coord postition [line, column] of the value to be changed in the board
      * @param {*} type - the new value
      */
-    update(coord, type){
-        let [line, column] = coord;
+    update([line, column], type){
         this.board[line][column] = type;
     }
 }
-
-/*
-We should put this in another file
- display(){
-        // console.log(this.board);
-        
-        for (let i = 0; i < this.line; i++){
-            let line = '';
-            for (let j = 0; j < this.column; j++){
-                switch(this.board[i][j]){
-                    case 1 : // obstacle
-                        line += 'X ';
-                        break;
-                    default : // case 0 = road
-                        line += '. ';
-                }
-            }
-            console.log(line);
-        }
-    }
-
-function getRandomInt(max){
-    return Math.floor(Math.random() * max)
-}
-
-// insert obstacle
-    let maxObstacles = getRandomInt(this.line * this.column);
-    for(let i = 0; i < maxObstacles; i++){
-        this.board[getRandomInt(this.line)][getRandomInt(this.column)] = 1;
-    }
-
-    // test :
-let board = new Board(15, 20);
-board.display();
-*/

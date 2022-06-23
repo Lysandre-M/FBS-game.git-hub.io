@@ -1,35 +1,55 @@
 "use strict"
 
-// for the character's movements
-window.addEventListener('keydown', move); 
+export class Character {
+	#direction = "down";
+	#position;
 
-/* manage the character's movements*/
-function move (event){
-	const e = event.keyCode;
-	switch (e) {
-		// left, q
-		case 37 : case 81 :
-			console.log(`left`);
-			break;
+	constructor(line, column){
+        this.#position = [line, column];
+    }
 
-		// up, z
-		case 38 : case 90 :
-			console.log(`up`);
-			break;
+	position(){
+		return this.#position;
+	}
 
-		// right, d
-		case 39 : case 68 : 	
-			console.log(`right`);
-			break;
+	direction(){
+		return this.#direction;
+	}
 
-		// down, s
-		case 40 : case 83 : 	
-			console.log(`down`);
-			break;
-		
-		// ignore, do nothing
-		default:
-			console.log(`ignore this key (ASCII code : ${e})`);
-			break;
+	update(coord){
+		this.#position = coord;
+	}
+
+	/* manage the character's movements*/
+	move(event){
+		let [line, col] = this.#position;
+		const e = event.keyCode;
+		switch (e) {
+			// left, q
+			case 37 : case 81 :
+				this.#direction = "left";
+				return [line, col -1];
+	
+			// up, z
+			case 38 : case 90 :
+				this.#direction = "up";
+				return [line -1, col];
+	
+			// right, d
+			case 39 : case 68 : 	
+				this.#direction = "right";
+				return [line, col + 1];
+	
+			// down, s
+			case 40 : case 83 : 	
+				this.#direction = "down";
+				return [line + 1, col];
+			
+			// ignore, do nothing
+			default:
+				console.log(`ignore this key (ASCII code : ${e})`);
+				return [line, col];
+		}
 	}
 }
+

@@ -1,8 +1,10 @@
 /* Game script ! :D */
 "use strict" // allow us to do less errors
 
+/* variables */
 var timeSet;
 
+/* functions */
 function onload() {
 	/* the canvas will be displayed after 1s */
 	timeSet = setTimeout(showPage, 1000);

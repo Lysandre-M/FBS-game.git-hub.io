@@ -1,4 +1,5 @@
-/* Page script ! :D */
+/* Stuff to be done when loading the page. */
+
 "use strict" // allow us to do less errors
 
 /* variables */

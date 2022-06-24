@@ -1,3 +1,5 @@
+/* game script */
+
 "use strict"
 
 /* Importations */
